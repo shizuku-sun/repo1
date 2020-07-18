@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>H5 Novel</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+        #container
+        {
+            height: 100%;
+            width:100%;
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            background-color: #1b6d85;
+            z-index: 0;
+        }
+
+        #left_talk
+        {
+            opacity: 0;
+        }
+        #right_talk
+        {
+            opacity: 0;
+        }
+        #bottom_talk
+        {
+            background-color: black;
+            opacity: 0.5;
+            position: absolute;
+            margin-top: 33%;
+            height: 200px;
+            width: 100%;
+            z-index: 1;
+            animation: anim 1000ms;
+            -webkit-animation: anim 1000ms;
+            -moz-animation:  anim 1000ms;
+            -o-animation: anim 1000ms;
+        }
+        @keyframes anim{
+            0%{opacity: 0;margin-top:50%}
+            20%{opacity: 0.2;margin-top:42%}
+            0%{opacity: 0.3;margin-top:35%}
+            0%{opacity: 0.4;margin-top:32%}
+            0%{opacity: 0.5;margin-top:50%}
+        }
+        @-webkit-keyframes anim {
+            0%{opacity: 0;margin-top:50%}
+            20%{opacity: 0.2;margin-top:42%}
+            0%{opacity: 0.3;margin-top:35%}
+            0%{opacity: 0.4;margin-top:32%}
+            0%{opacity: 0.5;margin-top:50%}
+        }
+        @-moz-keyframes anim{
+            0%{opacity: 0;margin-top:50%}
+            20%{opacity: 0.2;margin-top:42%}
+            0%{opacity: 0.3;margin-top:35%}
+            0%{opacity: 0.4;margin-top:32%}
+            0%{opacity: 0.5;margin-top:50%}
+        }
+    </style>
+    <script src="lib/vue.js"></script>
+    <script>
+        window.onload = function () {
+
+            var vm = new Vue({
+                el: '#container',
+                data:{
+                    flag : true,
+                },
+                methods:{
+                    anim:function(){
+                        flag=!flag;
+                    }
+                }
+            })
+        }
+    </script>
+
+</head>
+<body>
+    <div id="container" @click="anim">
+
+        <div id="left_talk">
+
+        </div>
+        <div id="right_talk">
+
+        </div>
+        <div id="bottom_talk" class="flag?'anim':''">
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body
+{
+    background: url("../img/bk.bmp") no-repeat ;
+}
+
+.rg_layout
+{
+    /*width: 500px;*/
+    /*height: 550px;*/
+    border: 5px solid #A6A6A6;
+    background-color: white ;
+}
+@media (min-width: 1200px) {
+    .container{
+        max-width: 500px;
+    }
+}
+.carousel slide
+{
+    width: 500px;
+    height: 200px;
+    border: 5px solid #A6A6A6;
+    background-color: white ;
+    background-size : cover;
+}
+
+
+.rg_left
+{
+    float: top;
+
+    border: 1px solid #FFD026;
+    padding: 18px;
+}
+.rg_left > p:first-child
+{
+    color: #FFD026;
+    font-size: 20px;
+}
+.rg_left > p:last-child
+{
+    color: #A6A6A6;
+    font-size: 20px;
+}
+
+.rg_center
+{
+    float: top;
+}
+.inputlable
+{
+    width: 100px;
+    text-align: right;
+    height: 50px;
+
+}
+.image
+{
+
+}
+.inputarea
+{
+    padding-left: 40px;
+}
+#username ,#password ,#phonenumber
+{
+    padding-left: 5px;
+}
+.rg_right
+{
+}
+.rg_right > p > a
+{
+    color:pink;
+}
+.download
+{
+    margin-top: 20px;
+    padding-left: 10px;
+}
+
+#submit
+{
+    width: 120px;
+    height: 30px;
+    margin-left: 20px;
+
+}
+.error{
+    color:red;
+}
